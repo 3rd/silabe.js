@@ -53,35 +53,36 @@ class Silabe {
     this.cautaPattern('ssvc').forEach(index => {
       this._splitmap[index + 2] = 1
     })
-    // #3: Doua consoane intre doua vocale se impart: 'vccv' -> ['vc', 'cv']
+    // #2: Doua consoane intre doua vocale se impart: 'vccv' -> ['vc', 'cv']
     // Exceptie: Daca prima consoana este ['b', 'c', 'd', 'f', 'g', 'h', 'p', 't', 'v']
     //  si a doua consoana este 'l' sau 'r', ambele consoane trec in a doua silaba
-    // Exceptie: ['cs', 'gz', 'ch', 'gh'] sunt tratate ca o singura unitate
+    // Exceptie: ['ch', 'gh'] sunt tratate ca o singura unitate cand sunt urmate de "e" sau "i"
     this.cautaPattern('vccv').forEach(index => {
       if (['l', 'r'].includes(this._litere[index + 1].litera) &&
         ['b', 'c', 'd', 'f', 'g', 'h', 'p', 't', 'v'].includes(this._litere[index + 1].litera)) {
         this._splitmap[index] = 1
-      } else if (['cs', 'gz', 'ch', 'gh'].includes(this._litere[index + 1].litera + this._litere[index + 2].litera)) {
+      // } else if (['cs', 'gz', 'ch', 'gh'].includes(this._litere[index + 1].litera + this._litere[index + 2].litera)) {
+      } else if (['e', 'i'].includes(this._litere[index + 3].litera) && ['ch', 'gh'].includes(this._litere[index + 1].litera + this._litere[index + 2].litera)) {
         this._splitmap[index] = 1
       } else {
         this._splitmap[index] = 0
         this._splitmap[index + 1] = 1
       }
     })
-    // #4: Trei sau mai multe consoane intre doua vocale trec prima la prima silaba si urmatoarele la a doua: 'vcccv' -> ['vc', 'ccv']
+    // #3: Trei sau mai multe consoane intre doua vocale trec prima la prima silaba si urmatoarele la a doua: 'vcccv' -> ['vc', 'ccv']
     // Exceptie: ['ltp', 'mpt', 'nct', 'ncț', 'ncș', 'ndv', 'rct', 'rtf', 'stm', 'ndv', 'ldm', 'lpn', 'ltc', 'ndc', 'nsl', 'nsr', 'nsv', 'ntl', 'rbț', 'rgș', 'rtb', 'rtc', 'rth', 'rtj', 'rtm', 'rtp', 'rts', 'rtț', 'rtv', 'stb', 'stc', 'std', 'stf', 'stl', 'stn', 'stp', 'sts', 'stt', 'stv'] -> dupa a doua consoana
-    this.cautaPattern('vccc*v').forEach(index => {
+    this.cautaPattern('vcccc*(v|s)').forEach(index => {
       if (['ltp', 'mpt', 'nct', 'ncț', 'ncș', 'ndv', 'rct', 'rtf', 'stm', 'ndv', 'ldm', 'lpn', 'ltc', 'ndc', 'nsl', 'nsr', 'nsv', 'ntl', 'rbț', 'rgș', 'rtb', 'rtc', 'rth', 'rtj', 'rtm', 'rtp', 'rts', 'rtț', 'rtv', 'stb', 'stc', 'std', 'stf', 'stl', 'stn', 'stp', 'sts', 'stt', 'stv'].includes(this._litere[index + 1].litera + this._litere[index + 2].litera + this._litere[index + 3].litera)) {
         this._splitmap[index + 2] = 1
       } else {
         this._splitmap[index + 1] = 1
       }
     })
-    // #5: Doua vocale alaturate trec in silabe diferite
+    // #4: Doua vocale alaturate trec in silabe diferite
     this.cautaPattern('vv').forEach(index => {
       this._splitmap[index] = 1
     })
-    // #6: Daca o vocala este urmata de un difton / triftong se desparte dupa vocala
+    // #5: Daca o vocala este urmata de un difton / triftong se desparte dupa vocala
     this.cautaPattern('vsv').forEach(index => {
       this._splitmap[index] = 1
     })
