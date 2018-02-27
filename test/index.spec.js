@@ -1,7 +1,7 @@
 /* global describe, it, before */
 
 import chai from 'chai';
-import Silabe from '../lib/silabe.js';
+import Silabe from '../src/index.js';
 
 chai.expect();
 
