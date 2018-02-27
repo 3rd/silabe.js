@@ -1,7 +1,7 @@
 # Silabe.js - WIP
 
 
-![Travis](https://img.shields.io/travis/neculaesei/silabe.js.svg?style=for-the-badge)
+[![Travis](https://img.shields.io/travis/neculaesei/silabe.js.svg?style=for-the-badge)](https://travis-ci.org/neculaesei/silabe.js)
 [![GitHub issues](https://img.shields.io/github/issues/neculaesei/silabe.js.svg?style=for-the-badge)](https://github.com/neculaesei/silabe.js/issues)
 [![GitHub license](https://img.shields.io/github/license/neculaesei/silabe.js.svg?style=for-the-badge)](https://github.com/neculaesei/silabe.js/blob/master/LICENSE)
 

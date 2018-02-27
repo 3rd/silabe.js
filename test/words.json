@@ -47,10 +47,6 @@
   "expect": ["în", "ger"]
 },
 {
-  "input": "vehe",
-  "expect": ["ve", "he"]
-},
-{
   "input": "ungher",
   "expect": ["un", "gher"]
 },
@@ -67,6 +63,6 @@
   "expect": ["tic", "sit"]
 },
 {
-  "input": "unghie",
+  "input": "ungh(i)e",
   "expect": ["un", "ghi", "e"]
 }]
