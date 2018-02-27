@@ -1,0 +1,72 @@
+[{
+  "input": "masă",
+  "expect": ["ma", "să"]
+},
+{
+  "input": "pădure",
+  "expect": ["pă", "du", "re"]
+},
+{
+  "input": "utilizare",
+  "expect": ["u", "ti", "li", "za", "re"]
+},
+{
+  "input": "masă",
+  "expect": ["ma", "să"]
+},
+{
+  "input": "pâine",
+  "expect": ["pâi", "ne"]
+},
+{
+  "input": "stropeală",
+  "expect": ["stro", "pea", "lă"]
+},
+{
+  "input": "creioane",
+  "expect": ["cre", "ioa", "ne"]
+},
+{
+  "input": "axă",
+  "expect": ["a", "xă"]
+},
+{
+  "input": "examen",
+  "expect": ["e", "xa", "men"]
+},
+{
+  "input": "exerciţiu",
+  "expect": ["e", "xer", "ci", "ţiu"]
+},
+{
+  "input": "veche",
+  "expect": ["ve", "che"]
+},
+{
+  "input": "înger",
+  "expect": ["în", "ger"]
+},
+{
+  "input": "vehe",
+  "expect": ["ve", "he"]
+},
+{
+  "input": "ungher",
+  "expect": ["un", "gher"]
+},
+{
+  "input": "artă",
+  "expect": ["ar", "tă"]
+},
+{
+  "input": "activ",
+  "expect": ["ac", "tiv"]
+},
+{
+  "input": "ticsit",
+  "expect": ["tic", "sit"]
+},
+{
+  "input": "unghie",
+  "expect": ["un", "ghi", "e"]
+}]
