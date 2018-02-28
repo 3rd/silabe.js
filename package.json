@@ -1,6 +1,6 @@
 {
   "name": "silabe",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "JavaScript syllabification library for the romanian language. RO: Librarie JavaScript pentru despartirea cuvintelor in silabe in limba romana.",
   "main": "lib/silabe.js",
   "scripts": {
