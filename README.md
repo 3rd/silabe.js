@@ -38,8 +38,13 @@ You can either require and use the library like this:
 
 ```javascript
 const silabe = require('silabe')
+
 console.log(silabe('examen'))
 // Outputs to console: ['e', 'xa', 'men']
+
+// Declare accent by placing paranthesis around a vocal
+console.log('ungh(i)e')
+// Outputs to console: ['un', 'ghi', 'e']
 ```
 
 Or you can use a `<script>` tag and just load the library in a web page, **silabe** will be a global.
