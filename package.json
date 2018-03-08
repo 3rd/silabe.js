@@ -13,15 +13,7 @@
     "type": "git",
     "url": "https://github.com/neculaesei/silabe.js.git"
   },
-  "keywords": [
-    "webpack",
-    "es6",
-    "starter",
-    "library",
-    "universal",
-    "umd",
-    "commonjs"
-  ],
+  "keywords": ["romania", "syllabification", "silabe"],
   "author": "Andrei Neculaesei",
   "license": "AGPL-3.0",
   "bugs": {
